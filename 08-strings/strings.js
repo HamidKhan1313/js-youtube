@@ -1,12 +1,12 @@
-const name = "Hamid"
-const repoCount = 50
+//const name = "Hamid"
+//const repoCount = 50
 //console.log(name + repoCount + " value")
 
-console.log(`Hello my name is ${name} and my repoCount is ${repoCount}`);
+//console.log(`Hello my name is ${name} and my repoCount is ${repoCount}`);
 
 // another way to declare string
 
-const gameName = new String("Waleed-Khan")
+const gameName = new String("WaleedKhan.")
 
 //console.log(gameName);
 
@@ -33,10 +33,10 @@ const gameName = new String("Waleed-Khan")
 
 
 // now first we insilize string with variabe and then convert into substring
-const newString = gameName.substring(0, 11)
-console.log(newString);
+//const newString = gameName.substring(0, 11)
+//console.log(newString);
 
-// we give slice also negative value
-const anotherString = gameName.slice(-4 ,-1)
+// we give slice also negative value it give us nill value on 0 index
+const anotherString = gameName.slice(-5 ,-1)
 console.log(anotherString);
 
