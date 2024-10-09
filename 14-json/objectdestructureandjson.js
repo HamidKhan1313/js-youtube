@@ -30,7 +30,7 @@ console.log(instructer);
     {},
     {}
 ]
-// 
+// json --> api call ---> result is bellow 
 // {
 //     "login": "hiteshchoudhary",
 //     "id": 11613311,
