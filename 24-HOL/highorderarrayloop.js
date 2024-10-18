@@ -8,3 +8,4 @@ for (const key in myobj) {
    console.log(`${key} shortcut is ${myobj[key]}` );
  
 }
+const programming = ['js', 'rb', 'py']
