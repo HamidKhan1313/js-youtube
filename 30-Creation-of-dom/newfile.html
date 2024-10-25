@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai or code</title>
+</head>
+<body style="background-color: #212121; color: #fff;" >
+    
+</body>
+<script>
+    // line 13-20 code is stored in memory not in shows in page 
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() *10 + 1)
+    div.setAttribute("title", "myName")
+    div.style.backgroundColor = "green"
+    div.style.padding = "15px"
+    //div.innerText = "My Name Is Hamid Khan"
+
+    // this method can set directly text so we use this method and ignore above method
+    const addText = document.createTextNode("My Name Is Hamid Khan")
+    div.appendChild(addText)
+
+    // now we showing  the text in a page
+    document.body.appendChild(div)
+</script>
+</html>
