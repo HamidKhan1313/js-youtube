@@ -5,10 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event listner</title>
 </head>
-<body>
+<body style="background-color: #414141; color: aliceblue;">
     <h2> Amazing Images </h2>
-    <ul id="Images">
-<li><img src="" alt="photoshop"></li>
+    <ul id="images">
+<li><img src="pexels-ilyes-seven-1263117-2408328.jpg" id="photoshop" width="200px" alt=""></li>
+<li><img src="pexels-bertellifotografia-1906157.jpg" id="prayer" width="200px" alt="prayer"></li>
+<li><img src="pexels-photo-315191.webp" id="japan" width="200px" alt=""></li>
+<li><img src="pexels-photo-357159.jpeg" id="owl" width="200px" alt=""></li>
+<li><img src="pexels-photo-788200.jpeg" id="river" width="200px" alt=""></li>
+<li><a style="color: aliceblue;" href="https://www.google.com.pk/" id="google">Google</a></li>
+
     </ul>
 </body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked')
+    // }
+     //attachEvent()
+     //jQuery --> on
+    //type, timestamp, defaultprevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altKey, ctrlkey, shiftkey, keyCode
+    //e.stopPropogation method stop to bubble event to goes up and only one output
+//     document.getElementById('images').addEventListener('click', function(e){
+//        console.log("click inside the ul");
+       
+       
+//     }, false)
+//     document.getElementById('owl').addEventListener('click', function(e){
+//        console.log("owl clicked");
+       
+//        e.stopPropagation()
+//     }, false)
+
+//   document.getElementById('google').addEventListener('click', function(e){
+//     e.preventDefault()
+//     e.stopPropagation()
+//     console.log("google  clicked");
+//   }, false)
+document.querySelector('#images').addEventListener('click', function(e){
+console.log(e.target.tagName);
+if(e.target.tagName === 'IMG'){
+    console.log(e.target.id);
+    
+    let removeIt = e.target.parentNode
+    removeIt.remove()
+}
+
+
+
+})
+// removeIt.parentNode.removeChild(removeIt)
+</script>
 </html>
