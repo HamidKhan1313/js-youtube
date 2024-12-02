@@ -56,4 +56,57 @@ console.log(username);
     console.log(error);
     
 })
+.finally(()=> console.log('promise is either resolve are rejected'))
 
+// for error handling use async
+const promisefive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        if (!resolve) {
+            resolve({username: "Java Script", password: 123})
+        
+        }else{
+            reject('Error: JS went wrong')
+        }
+        }, 1000)
+})
+
+async function consumePromisefive(){
+    try {
+        const response = await promisefive
+        console.log(response);
+    
+     } catch (error) {
+        console.log(error);
+        
+    }
+    
+}
+consumePromisefive()
+
+// next lecture for study
+
+
+// async function getAllusers(){
+// try {
+    
+//         const response = await fetch('https://api.github.com/users/hamidkhan1313')
+//         const data = await response.json()
+//         console.log(data);
+        
+        
+//     } catch (error) {
+//     console.log('E:', error);
+//     }
+// }
+//   getAllusers()
+
+fetch('https://api.github.com/users/hamidkhan1313')
+.then((response)=> {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+    
+})
+.catch((error) => console.log(error))
